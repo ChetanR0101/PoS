@@ -9,8 +9,15 @@
             "views/pos_checkin_views.xml",
             "views/pos_checkout_views.xml",
             "views/pos_products_views.xml",
-            "security/ir.model.access.csv"
+            "security/ir.model.access.csv",
+
+            # report
+            "report/report.xml",
+            "report/checkout_invoice_template.xml",
             ],
+    "css": [
+      "PoS/static/src/css/main.css",
+      ],
     "installable":True,
     "application":True
 }

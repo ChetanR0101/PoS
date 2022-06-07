@@ -1,40 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <record id="report_delivery" model="ir.actions.report">
-        <field name="name">Delivery</field>
-        <field name="model">sht.delivery</field>
+    <record id="report_checkout" model="ir.actions.report">
+        <field name="name">Invoice</field>
+        <field name="model">pos.checkout</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">shtinvoice.report_shtdelivery</field>
-        <field name="report_file">shtinvoice.report_shtdelivery</field>
-        <field name="binding_model_id" ref="model_sht_delivery"/>
+        <field name="report_name">PoS.invoice</field>
+        <field name="report_file">PoS.invoice</field>
+        <field name="binding_model_id" ref="model_pos_checkout"/>
         <field name="binding_type">report</field>
         
     </record>
 
-    <record id="report_packing" model="ir.actions.report">
-        <field name="name">Packing</field>
-        <field name="model">sht.delivery</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">shtinvoice.report_shtpacking</field>
-        <field name="report_file">shtinvoice.report_shtpacking</field>
-        <field name="binding_model_id" ref="model_sht_delivery"/>
-        <field name="binding_type">report</field>
-        
-    </record>
+    
 
-    <record id="report_proforma" model="ir.actions.report">
-        <field name="name">Proforma Invoice</field>
-        <field name="model">sht.delivery</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">shtinvoice.report_shtproforma</field>
-        <field name="report_file">shtinvoice.report_shtproforma</field>
-        <field name="binding_model_id" ref="model_sht_delivery"/>
-        <field name="binding_type">report</field>
-        
-    </record>
-
-    <record id="paperformat_sht" model="report.paperformat">
-        <field name="name">SHT</field>
+    <record id="paperformat_pos" model="report.paperformat">
+        <field name="name">PoS</field>
         <field name="default" eval="True"/>
         <field name="format">custom</field>
         <field name="page_height">297</field>
