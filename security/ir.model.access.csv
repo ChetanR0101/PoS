@@ -1,9 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-<<<<<<< HEAD
-PoS.access_pos_inventory,access_pos_inventory,PoS.model_pos_inventory,base.group_user,1,1,1,1
+PoS.access_pos_checkin,access_pos_checkin,PoS.model_pos_checkin,base.group_user,1,1,1,1
 PoS.access_pos_checkout,access_pos_checkout,PoS.model_pos_checkout,base.group_user,1,1,1,1
-=======
-Pos.access_pos_checkin,access_pos_checkin,Pos.model_pos_checkin,base.group_user,1,1,1,1
-Pos.access_pos_checkout,access_pos_checkout,Pos.model_pos_checkout,base.group_user,1,1,1,1
-Pos.access_pos_products,access_pos_products,Pos.model_pos_products,base.group_user,1,1,1,1
->>>>>>> e505ce06a28b8f71d10627c67c9bca75a6de6507
+PoS.access_pos_products,access_pos_products,PoS.model_pos_products,base.group_user,1,1,1,1

@@ -1,0 +1,74 @@
+/* table, th, td {
+    border: 1px solid;
+} */
+th p{
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 0;
+}
+.tdata p{
+    text-align: center;
+    margin-bottom: 0;
+}
+.col-3, .col-7{
+    font-weight: bold;
+    text-align: right;
+}
+.attn{
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+.product-table {
+    border:none;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+.product-table th, .product-table td{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.product-table td{
+    padding: 0.2rem;
+}
+.product-table tr:last-child td{
+    border-bottom: 1px solid black;
+}
+.product-table thead th{
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.detail-table {
+    border:none;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+.detail-table td, .detail-table th{
+    padding: 0 2px;
+}
+.detail-table td p, .detail-table th p{
+    margin-bottom: 0.1rem;
+}
+.detail-table th{
+    text-align: right;
+    border: 1px solid #000;
+}
+.total-border{
+    border: 1px solid #000;
+}
+
+/* packing List */
+.desc h5, .desc p{
+    margin: 1px auto 1px 0; 
+    padding: 0 auto 0 0;
+}
+
+.desc h5{
+    margin: 50px auto 1px 0; 
+    padding: 50px auto 0 0;
+}
+.height-tr{
+    height: 50px;
+}
