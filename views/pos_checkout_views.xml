@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+
+
+    <record id="checkout_action" model="ir.actions.act_window">
+        <field name="name">Checkout</field>
+        <field name="res_model">pos.checkout</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+                Create New Checkout
+            </p>
+        </field>
+    </record>
+
+
+
+
+
+    <menuitem
+            id="pos_checkout_menu"
+            name="Checkout"
+            action="checkout_action"
+            groups="base.group_user"
+            parent="pos_main_menu"
+            sequence="2"/>
+</odoo>
