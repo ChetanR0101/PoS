@@ -2,9 +2,9 @@
 <odoo>
     
 
-    <record id="inventory_action" model="ir.actions.act_window">
-        <field name="name">Inventory</field>
-        <field name="res_model">pos.inventory</field>
+    <record id="checkin_action" model="ir.actions.act_window">
+        <field name="name">CheckIn</field>
+        <field name="res_model">pos.checkin</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[]</field>
         <field name="context">{}</field>
@@ -23,9 +23,9 @@
         name="PoS"/>
 
         <menuitem
-            id="pos_inventory_menu"
-            name="Inventory"
-            action="inventory_action"
+            id="pos_checkin_menu"
+            name="Checkin"
+            action="checkin_action"
             groups="base.group_user"
             parent="pos_main_menu"
             sequence="1"/>
