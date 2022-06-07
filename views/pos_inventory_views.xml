@@ -1,4 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     
+
+    <record id="inventory_action" model="ir.actions.act_window">
+        <field name="name">Inventory</field>
+        <field name="res_model">pos.inventory</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <P>
+                Add New Products
+            </P>
+            
+        </field>
+    </record>
+
+
+
+    <menuitem
+        id="pos_main_menu"
+        name="PoS"/>
+
+        <menuitem
+            id="pos_inventory_menu"
+            name="Inventory"
+            action="inventory_action"
+            groups="base.group_user"
+            parent="pos_main_menu"
+            sequence="1"/>
 </odoo>
