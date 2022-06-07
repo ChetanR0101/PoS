@@ -6,8 +6,8 @@
     "sequence":-100,
     "depends":["base"],
     "data":[
+            "views/pos_inventory_views.xml",
             "security/ir.model.access.csv"
-
             ],
     "installable":True,
     "application":True
