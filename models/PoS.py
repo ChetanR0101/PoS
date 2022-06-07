@@ -1,6 +1,6 @@
 from odoo import models,fields, api
 
-#inventory
+#inventory test
 class PoS_inventory(models.Model):
     _name="pos.inventory"
 
