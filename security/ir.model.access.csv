@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 Pos.access_pos_checkin,access_pos_checkin,Pos.model_pos_checkin,base.group_user,1,1,1,1
 Pos.access_pos_checkout,access_pos_checkout,Pos.model_pos_checkout,base.group_user,1,1,1,1
 Pos.access_pos_products,access_pos_products,Pos.model_pos_products,base.group_user,1,1,1,1
+Pos.access_pos_products_data,access_pos_products_data,Pos.model_pos_products_data,base.group_user,1,1,1,1

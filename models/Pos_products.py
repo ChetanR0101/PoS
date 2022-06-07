@@ -10,7 +10,7 @@ class PoS_products(models.Model):
     qut= fields.Integer("Quntity")
     sku=fields.Char("Product ID (SKU)")
     
-    # To generate tanker record id
+
     @api.model
     def create(self, vals_list):
         nxt_ran_int= random.randint(10,99)
@@ -21,4 +21,11 @@ class PoS_products(models.Model):
         res.name=f"[{res.sku}] {res.name}"
         return res
 
+class PoS_products_data(models.Model):
+    _name='pos.products_data'
+    name=fields.Many2one('pos.products',string="Product Name")
+    price= fields.Float("Price")
+    qut= fields.Integer("Quntity")
+
+    product_id= fields.Many2one(comodel_name="pos.checkout")
 

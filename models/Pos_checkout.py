@@ -7,3 +7,5 @@ class PoS_checkout(models.Model):
 
     name= fields.Char("Customer Name")
     date=fields.Date("Date")
+
+    product_ids= fields.One2many(comodel_name="pos.products_data",inverse_name="product_id")

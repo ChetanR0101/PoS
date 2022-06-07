@@ -24,6 +24,7 @@
                     <field name="name" />
                     <field name="sku" />
                     <field name="price" />
+                    <field name="qut" />
                 </tree>
             </field>
         </record>
