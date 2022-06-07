@@ -1,1 +1,1 @@
-from . import Pos_inventory,Pos_checkout
+from . import Pos_checkin,Pos_checkout,Pos_products
