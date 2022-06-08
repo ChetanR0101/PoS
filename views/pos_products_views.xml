@@ -24,6 +24,7 @@
                     <field name="name" />
                     <field name="sku" />
                     <field name="price" />
+                    <field name="discount" />
                     <field name="qut" />
                 </tree>
             </field>
@@ -40,6 +41,7 @@
                            <field name="name" />
                            <field name="sku" />
                            <field name="price" /> 
+                           <field name="discount" /> 
                            <field name="image" widget="image" /> 
                         </group>
                     </sheet>

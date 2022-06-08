@@ -6,7 +6,7 @@ class PoS_checkin(models.Model):
     name=fields.Many2one(string="Product Name",comodel_name="pos.products")
     in_qut= fields.Integer("Quntity")
 
-    discount= fields.Float("% Discount",digits=(4,2))
+    
 
     @api.model
     def create(self, vals_list):
