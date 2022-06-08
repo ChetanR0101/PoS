@@ -23,8 +23,9 @@
                 <tree string="Products">
                     <field name="name" />
                     <field name="sku" />
-                    <field name="price" />
+                    <field name="list_price" />
                     <field name="discount" />
+                    <field name="price_af_dis" />
                     <field name="qut" />
                 </tree>
             </field>
@@ -40,8 +41,9 @@
                         <group>
                            <field name="name" />
                            <field name="sku" />
-                           <field name="price" /> 
+                           <field name="list_price" /> 
                            <field name="discount" /> 
+                           <field name="price_af_dis" /> 
                            <field name="image" widget="image" /> 
                         </group>
                     </sheet>
