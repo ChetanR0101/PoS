@@ -17,6 +17,58 @@
     </record>
 
 
+        <!-- Checkout Tree View -->
+        <record id="checkout_view_tree" model="ir.ui.view">
+            <field name="name">pos.checkout.view.tree</field>
+            <field name="model">pos.checkout</field>
+            <field name="arch" type="xml">
+                <tree string="Checkout">
+                    <field name="name" />
+                    <field name="invoice_id" />
+                    <field name="date" />
+                    <field name="grand_sum" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- CheckIN Form View -->
+        <record id="checkout_view_form" model="ir.ui.view">
+            <field name="name">pos.checkout.view.form</field>
+            <field name="model">pos.checkout</field>
+            <field name="arch" type="xml">
+                <form string="Checkout">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="date" />
+                            <field name="invoice_id" />
+                            <field name="grand_sum" />
+                        </group>
+                        <notebook>
+                            <page name="product_ids" string="Products">
+                                <field name="product_ids" >
+                                <tree>
+                                    <field name="name" />
+                                    <field name="price" />
+                                    <field name="qut" />
+                                    <field name="amount" />
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="name" />
+                                        <field name="price" />
+                                        <field name="qut" />
+                                        <field name="amount" />
+                                    </group>
+                                </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
 
 
 
