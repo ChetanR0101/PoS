@@ -71,16 +71,18 @@
                         </div>
                         <table class="table table-borderless product-table">
                             <colgroup>
-                                <col style="width:60%;"/>
+                                <col style="width:47%;"/>
                                 <col style="width:12%;"/>
+                                <col style="width:13%;"/>
                                 <col style="width:13%;"/>
                                 <col style="width:15%;"/>
                             </colgroup>
                             <thead>
                                 <tr>
                                 <th scope="col">Product Name</th>
-                                <th scope="col">QTY/HOUR</th>
+                                <th scope="col">QTY</th>   
                                 <th scope="col">UNIT PRICE</th>
+                                <th scope="col">DISCOUNT</th>
                                 <th scope="col">AMOUNT</th>
                                 </tr>
                             </thead>
@@ -90,6 +92,7 @@
                                     <tr>
                                         <td><t t-out="p.name.name"/></td>
                                         <td class="text-center"><t t-out="p.qut"/></td>
+                                        <td class="text-center">Rs <t t-out="p.discount"/></td>
                                         <td class="text-center">Rs <t t-out="p.price"/></td>
                                         <td class="text-center">Rs
                                             <t t-set="amount" t-value="p.qut * p.price"/>
@@ -102,8 +105,8 @@
                         </table>
                         <table class="table table-borderless detail-table">
                             <colgroup>
-                                <col style="width:60%;"/>
-                                <col style="width:25%;"/>
+                                <col style="width:59%;"/>
+                                <col style="width:26%;"/>
                                 <col style="width:15%;"/>
                             </colgroup>
                             <tbody>
