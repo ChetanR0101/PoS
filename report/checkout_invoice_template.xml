@@ -87,17 +87,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-set="subtotal" t-value="0"></t>
                                 <t t-foreach="o.product_ids" t-as="p">
                                     <tr>
                                         <td><t t-out="p.name.name"/></td>
                                         <td class="text-center"><t t-out="p.qut"/></td>
-                                        <td class="text-center">Rs <t t-out="p.discount"/></td>
                                         <td class="text-center">Rs <t t-out="p.price"/></td>
+                                        <td class="text-center"><t t-out="p.discount"/> %</td>
                                         <td class="text-center">Rs
-                                            <t t-set="amount" t-value="p.qut * p.price"/>
+                                            <t t-set="amount" t-value="p.amount"/>
                                             <t t-out="amount"/>
-                                            <t t-set="subtotal" t-value="subtotal + amount"/>
                                         </td>
                                     </tr>
                                 </t>
@@ -114,61 +112,27 @@
                                     <td><p>All payments to be made in Indian Rs</p></td>
                                     <th class="total-border">SUBTOTAL:</th>
                                     <th class="total-border">Rs
-                                        <t t-out="subtotal"/>
+                                        <t t-out="o.grand_sum"/>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td><p>Cheques to made in favour of:</p></td>
                                     <th class="total-border">GST 7%:</th>
                                     <th class="total-border">Rs
-                                        <t t-set="gst7" t-value="subtotal * 0.07"/><t t-out="'%.2f'% gst7"/>
+                                        <t t-set="gst7" t-value="o.grand_sum * 0.07"/><t t-out="'%.2f'% gst7"/>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td><p><strong>"Prisms Communications"</strong></p></td>
                                     <th class="total-border">GRAND TOTAL:</th>
                                     <th class="total-border">Rs
-                                        <t t-set="grandTotal" t-value="subtotal + gst7"/><t t-out="'%.2f'% grandTotal"/>
+                                        <t t-set="grandTotal" t-value="o.grand_sum + gst7"/><t t-out="'%.2f'% grandTotal"/>
                                     </th>
                                 </tr>
-                                <tr>
-                                    <td><p>Our Banker:</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>ABC Bank Limited</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Hingne Branch</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Sinhagad Road</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Pune, Maharashtra, 411051</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>ACC NO.:  000-000-000</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Bank Code: 0000 Branch Code: 000</p></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <tr height="150px"></tr>
                                 <tr>
                                     <td></td>
-                                    <td colspan="2"  style="text-align: center; border-top: 1px solid #000"><p>AUTHORISED SIGNATURE</p></td>
+                                    <td colspan="2"  style="text-align: center; border-top: 1px solid #000;"><p>AUTHORISED SIGNATURE</p></td>
                                 </tr>
                             </tbody>
                         </table>
