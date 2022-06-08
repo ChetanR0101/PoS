@@ -1,11 +1,13 @@
+from datetime import datetime
 from odoo import api, models,fields
 
 #inventory
 class PoS_checkin(models.Model):
     _name="pos.checkin"
     name=fields.Many2one(string="Product Name",comodel_name="pos.products")
+    date= fields.Date("Date",default=datetime.today())
     in_qut= fields.Integer("Quntity")
-
+    
     
 
     @api.model

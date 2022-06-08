@@ -1,3 +1,4 @@
+from datetime import datetime
 from odoo import api, models,fields
 
 
@@ -6,7 +7,7 @@ class PoS_checkout(models.Model):
     _name="pos.checkout"
 
     name= fields.Char(string="Customer Name")
-    date=fields.Date("Date")
+    date=fields.Date("Date",default=datetime.today())
 
     @api.depends('product_ids.amount')
     @api.onchange('product_ids')

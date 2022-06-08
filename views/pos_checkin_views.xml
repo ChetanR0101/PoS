@@ -16,7 +16,35 @@
         </field>
     </record>
 
+        <!-- Checkin tree view -->
+        <record id="checkin_view_tree" model="ir.ui.view">
+            <field name="name">pos.checkin.view.tree</field>
+            <field name="model">pos.checkin</field>
+            <field name="arch" type="xml">
+                <tree string="Checkin">
+                    <field name="name" />
+                    <field name="date" />
+                    <field name="in_qut" />
+                </tree>
+            </field>
+        </record>
 
+        <!-- Checkin form view -->
+        <record id="checkin_view_form" model="ir.ui.view">
+            <field name="name">pos.checkin.view.form</field>
+            <field name="model">pos.checkin</field>
+            <field name="arch" type="xml">
+                <form string="Checkin">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="date" />
+                            <field name="in_qut" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
     <menuitem
         id="pos_main_menu"

@@ -26,9 +26,9 @@ class PoS_products(models.Model):
     def create(self, vals_list):
         nxt_ran_int= random.randint(10,99)
         res= super(PoS_products,self).create(vals_list)
-        fst_let= res.name[0:4]
-        fst_let=fst_let.upper()
-        res.sku=f"{fst_let}_{nxt_ran_int}-{res.id}"
+        fst_let= res.name.split()
+        # fst_let=fst_let.upper()
+        res.sku=f"{fst_let[0]}_{nxt_ran_int}-{res.id}"
         res.name=f"[{res.sku}] {res.name}"
 
         dic_amount= (res.discount/100) * res.list_price

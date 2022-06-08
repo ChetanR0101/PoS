@@ -4,8 +4,8 @@
         <field name="name">Invoice</field>
         <field name="model">pos.checkout</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">PoS.invoice</field>
-        <field name="report_file">PoS.invoice</field>
+        <field name="report_name">Pos.invoice</field>
+        <field name="report_file">Pos.invoice</field>
         <field name="binding_model_id" ref="model_pos_checkout"/>
         <field name="binding_type">report</field>
         
