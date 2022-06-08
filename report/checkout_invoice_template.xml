@@ -47,7 +47,7 @@
                                             <p>INVOICE NO:</p>
                                         </div>
                                         <div class="col-5">
-                                            <p t-field="o.name"></p>
+                                            <p t-field="o.invoice_id"></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -55,7 +55,7 @@
                                             <p>YOUR ORDER NO:</p>
                                         </div>
                                         <div class="col-5">
-                                            <p t-field="o.name"></p>
+                                            <p t-field="o.id"></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -64,14 +64,6 @@
                                         </div>
                                         <div class="col-5">
                                             <p t-field="o.date"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <p>VENDOR CODE:</p>
-                                        </div>
-                                        <div class="col-5">
-                                            <p t-field="o.name"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -86,26 +78,26 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                <th scope="col">Description</th>
+                                <th scope="col">Product Name</th>
                                 <th scope="col">QTY/HOUR</th>
                                 <th scope="col">UNIT PRICE</th>
                                 <th scope="col">AMOUNT</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- <t t-set="subtotal" t-value="0"></t>
+                                <t t-set="subtotal" t-value="0"></t>
                                 <t t-foreach="o.product_ids" t-as="p">
                                     <tr>
-                                        <td><t t-out="p.desc"/></td>
-                                        <td class="text-center"><t t-out="p.qty"/></td>
-                                        <td class="text-center">USD <t t-out="p.unit_price"/></td>
-                                        <td class="text-center">USD
-                                            <t t-set="amount" t-value="p.qty * p.unit_price"/>
+                                        <td><t t-out="p.name.name"/></td>
+                                        <td class="text-center"><t t-out="p.qut"/></td>
+                                        <td class="text-center">Rs <t t-out="p.price"/></td>
+                                        <td class="text-center">Rs
+                                            <t t-set="amount" t-value="p.qut * p.price"/>
                                             <t t-out="amount"/>
                                             <t t-set="subtotal" t-value="subtotal + amount"/>
                                         </td>
                                     </tr>
-                                </t> -->
+                                </t>
                             </tbody>
                         </table>
                         <table class="table table-borderless detail-table">
@@ -116,24 +108,24 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <td><p>All payments to be made in USD Dollars</p></td>
+                                    <td><p>All payments to be made in Indian Rs</p></td>
                                     <th class="total-border">SUBTOTAL:</th>
-                                    <th class="total-border">USD 
-                                        <!-- <t t-out="subtotal"/> -->
+                                    <th class="total-border">Rs
+                                        <t t-out="subtotal"/>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td><p>Cheques to made in favour of:</p></td>
                                     <th class="total-border">GST 7%:</th>
-                                    <th class="total-border">USD
-                                        <!-- <t t-set="gst7" t-value="subtotal * 0.07"/><t t-out="'%.2f'% gst7"/> -->
+                                    <th class="total-border">Rs
+                                        <t t-set="gst7" t-value="subtotal * 0.07"/><t t-out="'%.2f'% gst7"/>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td><p><strong>"Prisms Communications"</strong></p></td>
                                     <th class="total-border">GRAND TOTAL:</th>
-                                    <th class="total-border">USD 
-                                        <!-- <t t-set="grandTotal" t-value="subtotal + gst7"/><t t-out="'%.2f'% grandTotal"/> -->
+                                    <th class="total-border">Rs
+                                        <t t-set="grandTotal" t-value="subtotal + gst7"/><t t-out="'%.2f'% grandTotal"/>
                                     </th>
                                 </tr>
                                 <tr>
