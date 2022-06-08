@@ -15,17 +15,6 @@
         </field>
     </record>
 
-    <record id="pos_products_view_search" model="ir.ui.view">
-        <field name="name">pos.products.view.search</field>
-        <field name="model">pos.products</field>
-        <field name="arch" type="xml">
-            <search string="Search Product">
-                <field name="name" />
-                <field name="sku" />
-            </search>
-        </field>
-    </record>
-
         <!-- Tree view -->
         <record id="products_view_tree" model="ir.ui.view">
             <field name="name">pos.products.view.tree</field>
