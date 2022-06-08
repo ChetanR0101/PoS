@@ -17,7 +17,7 @@ class PoS_products(models.Model):
         res= super(PoS_products,self).create(vals_list)
         fst_let= res.name[0:4]
         fst_let=fst_let.upper()
-        res.sku=fst_let+str(nxt_ran_int)+str(res.id)
+        res.sku=f"{fst_let}{nxt_ran_int}{res.id}"
         res.name=f"[{res.sku}] {res.name}"
         return res
 
