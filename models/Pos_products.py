@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 class PoS_products(models.Model):
     _name="pos.products"
     name=fields.Char("Product Name")
-    image= fields.Binary("Product Image")
+    pro_image= fields.Binary("Product Image")
     list_price= fields.Float("Price")
     qut= fields.Integer("Quntity")
     sku=fields.Char("Product ID (SKU)")
