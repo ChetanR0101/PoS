@@ -5,8 +5,12 @@ from odoo.exceptions import ValidationError
 #inventory
 class PoS_products(models.Model):
     _name="pos.products"
+    _inherit = "res.partner"
+
+
     name=fields.Char("Product Name")
-    pro_image= fields.Binary("Product Image")
+    # image = fields.Binary("Product Image")
+    # image_1920
     list_price= fields.Float("Price")
     qut= fields.Integer("Quntity")
     sku=fields.Char("Product ID (SKU)")
@@ -18,7 +22,15 @@ class PoS_products(models.Model):
     #         dic_amount= (rec.discount/100) * rec.list_price
     #         rec.price_af_dis= rec.list_price-dic_amount
     #     # self.price_af_dis=rec.price_af_dis
-            
+    
+    # code to remove inherit error
+    def _compute_partner_share(self):
+        pass
+    def _compute_commercial_partner(self):
+        pass
+    channel_ids = fields.Integer("Test")
+
+    
 
     price_af_dis= fields.Float("Price After Discount") #,compute=cal_discount,store=True
 

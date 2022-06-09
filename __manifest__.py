@@ -9,6 +9,7 @@
             "views/pos_checkin_views.xml",
             "views/pos_checkout_views.xml",
             "views/pos_products_views.xml",
+
             "security/ir.model.access.csv",
 
             # report
@@ -17,7 +18,13 @@
             ],
     "css": [
       "PoS/static/src/css/main.css",
+      "PoS/static/src/css/avatar.css",
       ],
+    "assets": {
+        "web.assets_backend": [
+            "PoS/static/src/css/avatar.css",
+        ]
+    },
     "installable":True,
     "application":True
 }

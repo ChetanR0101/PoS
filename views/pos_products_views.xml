@@ -44,7 +44,7 @@
                            <field name="list_price" /> 
                            <field name="discount" /> 
                            <field name="price_af_dis" /> 
-                           <field name="pro_image" widget="image" /> 
+                           <field name="image_1920" widget="image" /> 
                         </group>
                     </sheet>
                 </form>
