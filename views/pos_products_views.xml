@@ -62,12 +62,12 @@
                     <field name="list_price" />
                     <field name="discount" />
                     <field name="price_af_dis" />
-                    <field name="pro_image" widget="image" />
+                    <field name="image_1920" widget="image" />
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="o_kanban_image mr-1">
-                                    <img t-att-src="kanban_image('pos.products', 'pro_image', record.id.raw_value)" alt="Product" class="o_image_64_contain"/>
+                                    <img t-att-src="kanban_image('pos.products', 'image_1920', record.id.raw_value)" alt="Product" class="o_image_64_contain"/>
                                 </div>
 
                                 <div class="oe_kanban details">
