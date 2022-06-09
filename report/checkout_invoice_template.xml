@@ -33,10 +33,10 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <p> TO:</p>
+                                        <div class="col-5">
+                                            <p> CUSTOMER NAME :</p>
                                         </div>
-                                        <div class="col-9">
+                                        <div class="col-7" style="text-align: left;">
                                             <p t-field="o.name"></p>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                                 <div class="col-6">
                                     <div class="row">
                                         <div class="col-7">
-                                            <p>INVOICE NO:</p>
+                                            <p>INVOICE NO :</p>
                                         </div>
                                         <div class="col-5">
                                             <p t-field="o.invoice_id"></p>
@@ -52,15 +52,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-7">
-                                            <p>YOUR ORDER NO:</p>
-                                        </div>
-                                        <div class="col-5">
-                                            <p t-field="o.id"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <p>DATE:</p>
+                                            <p>DATE :</p>
                                         </div>
                                         <div class="col-5">
                                             <p t-field="o.date"></p>
@@ -69,6 +61,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <table class="table table-borderless product-table">
                             <colgroup>
                                 <col style="width:47%;"/>

@@ -1,0 +1,7 @@
+.o_field_widget.o_field_many2one_avatar .o_m2o_avatar > img, .o_field_widget.o_field_many2one_avatar .o_m2o_avatar > .o_m2o_avatar_empty{
+    border-radius: 0 !important; 
+    object-fit: cover !important;
+    margin-right: 4px !important;
+    width: 60px !important;
+    height: auto !important;
+}
