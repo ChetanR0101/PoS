@@ -57,7 +57,7 @@
                                 </tree>
                                 <form>
                                     <group>
-                                        <field name="name" widget="many2one_avatar"/>
+                                        <field name="name" widget="selection"/>
                                         <field name="price" />
                                         <field name="discount" />
                                         <field name="qut" />

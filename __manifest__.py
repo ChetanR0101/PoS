@@ -23,6 +23,7 @@
     "assets": {
         "web.assets_backend": [
             "PoS/static/src/css/avatar.css",
+            "PoS/static/src/js/select2_dropdown.js",
         ]
     },
     "installable":True,
