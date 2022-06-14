@@ -1,27 +1,29 @@
 odoo.define("PoS.dropdown", function (require) {
     "use strict";
-    alert("js running");
+    // alert("js running"); // used for debugging
 
-    jQuery('.modal-content').load(checkContainer);
-    // jQuery('ui-sortable > tr > td > a').click(checkContainer);
+    jQuery('.modal-content').ready(checkContainer);
     
+
     function checkContainer() {
-        console.log("checkContainer running...");
-        // if ($('.modal-content').is(':visible')){ 
+        // console.log("checkContainer running..."); // used for debugging
+        if ($('.modal-content').is(':visible')){ 
             //if the container is visible on the page
             $("select.o_input.o_field_widget.o_quick_editable").select2({
+               
                 formatResult: formatState,
                 formatSelection: formatState,
+                
                 minimumInputLength: 1,
                 allowClear: true,
                 placeholder:'select here',
                 // templateResult: formatState,
                 // templateSelection: formatState,
-            
+                
             });
             
             function formatState(opt) {
-                // alert("Select2 running");
+                // alert("Select2 running"); // used for debugging
                 var imurl;
                 if (!opt.id || (opt.id == 'false')) {
                     return opt.text.toUpperCase();
@@ -40,12 +42,19 @@ odoo.define("PoS.dropdown", function (require) {
                     );
                     return $opt;
                 }
+                
             }
-        // } 
-        // else {
-        //     setTimeout(checkContainer, 50); //wait 50 ms, then try again
-            
-        // }
+
+            $('button').click(function(){
+                // console.log("Clicked... now") // used for debugging
+                setTimeout(checkContainer, 500);
+            });
+              
+        } 
+        
+        else {
+            setTimeout(checkContainer, 500); //wait 50 ms, then try again
+        }
     }
 
 return;

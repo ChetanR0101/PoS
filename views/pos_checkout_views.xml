@@ -47,8 +47,9 @@
                         <notebook>
                             <page name="product_ids" string="Products">
                                 <field name="product_ids" >
-                                <tree>
-                                    <field name="name" widget="many2one_avatar"/>
+                                <tree >
+                                     <!-- editable="bottom" -->
+                                    <field name="name" widget="many2one_avatar" />
                                     <!-- <field name="image" widget="many2one_avatar"/> -->
                                     <field name="price" /> 
                                     <field name="discount" /> 
