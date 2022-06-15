@@ -7,6 +7,7 @@ class PoS_checkout(models.Model):
     _name="pos.checkout"
 
     name= fields.Char(string="Customer Name")
+    email_id= fields.Char(string="Email")
     date=fields.Date("Date",default=datetime.today())
 
     @api.depends('product_ids.amount')
@@ -19,15 +20,8 @@ class PoS_checkout(models.Model):
 
     grand_sum=fields.Float("Grand Sum",compute=cal_grand_sum,store=True)
 
-
-    # @api.depends('list_price','qut')
-    # @api.onchange('list_price' or 'qut')
-    # def cal_total(self):
-    #     for rec in self:
-    #         print(len(self))
-    #         rec.total_price= rec.list_price * rec.qut
-
-    # total_price=fields.Float("Total", compute=cal_total,store=True)
+    def action_mail_invoice(self):
+        print("Sending Mail")
 
     invoice_id= fields.Char("Invoice Id")
     @api.model

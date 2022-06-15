@@ -15,6 +15,8 @@
             # report
             "report/report.xml",
             "report/checkout_invoice_template.xml",
+
+            "data/mail_template.xml"
             ],
     "css": [
       "PoS/static/src/css/main.css",

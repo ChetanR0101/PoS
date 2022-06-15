@@ -37,9 +37,13 @@
             <field name="model">pos.checkout</field>
             <field name="arch" type="xml">
                 <form string="Checkout">
+                    <header>
+                        <button name="action_mail_invoice" type="object" string="Email Invoice" class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name" />
+                            <field name="email_id" />
                             <field name="date" />
                             <field name="invoice_id" />
                             <field name="grand_sum" />
