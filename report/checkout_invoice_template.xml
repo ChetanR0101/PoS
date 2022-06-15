@@ -83,12 +83,12 @@
                                 <t t-foreach="o.product_ids" t-as="p">
                                     <tr>
                                         <td><t t-out="p.name.name"/></td>
-                                        <td class="text-center"><t t-out="p.qut"/></td>
-                                        <td class="text-center">Rs <t t-out="p.price"/></td>
-                                        <td class="text-center"><t t-out="p.discount"/> %</td>
+                                        <td class="text-center"><t t-out="'%.2f'% p.qut"/></td>
+                                        <td class="text-center">Rs <t t-out="'%.2f'% p.price"/></td>
+                                        <td class="text-center"><t t-out="'%.2f'% p.discount"/> %</td>
                                         <td class="text-center">Rs
-                                            <t t-set="amount" t-value="p.amount"/>
-                                            <t t-out="amount"/>
+                                        <t t-set="amount" t-value="p.amount"/>
+                                        <t t-out="'%.2f'% amount"/>
                                         </td>
                                     </tr>
                                 </t>
