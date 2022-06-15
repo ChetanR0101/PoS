@@ -105,7 +105,7 @@
                                     <td><p>All payments to be made in Indian Rs</p></td>
                                     <th class="total-border">SUBTOTAL:</th>
                                     <th class="total-border">Rs
-                                        <t t-out="o.grand_sum"/>
+                                        <t t-out="'%.2f'% o.grand_sum"/>
                                     </th>
                                 </tr>
                                 <tr>
