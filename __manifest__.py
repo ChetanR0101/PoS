@@ -4,7 +4,7 @@
     "author":"Prisms - PoS",
     "description":"This App for PoS invoice",
     "sequence":-100,
-    "depends":["base"],
+    "depends":["base","mail"],
     "data":[
             "views/pos_checkin_views.xml",
             "views/pos_checkout_views.xml",

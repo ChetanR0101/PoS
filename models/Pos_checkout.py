@@ -8,6 +8,7 @@ class PoS_checkout(models.Model):
 
     name= fields.Char(string="Customer Name")
     email_id= fields.Char(string="Email")
+    from_email_id= fields.Char(string="Seller Email",default="chetan.rathod@prisms.in")
     date=fields.Date("Date",default=datetime.today())
 
     @api.depends('product_ids.amount')
@@ -20,8 +21,11 @@ class PoS_checkout(models.Model):
 
     grand_sum=fields.Float("Grand Sum",compute=cal_grand_sum,store=True)
 
+    # Function to send email
     def action_mail_invoice(self):
-        print("Sending Mail")
+        template_id = self.env.ref("Pos.checkout_invoice_email_template").id
+        self.env["mail.template"].browse(template_id).send_mail(self.id,force_send=True)
+
 
     invoice_id= fields.Char("Invoice Id")
     @api.model

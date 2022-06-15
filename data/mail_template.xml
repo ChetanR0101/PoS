@@ -4,18 +4,18 @@
             <!--Email template -->
             <record id="checkout_invoice_email_template" model="mail.template">
                 <field name="name">Checkout Invoice: Send by email</field>
-                <field name="model_id" ref="Pos.model_checkout"/>
-                <field name="email_from">chetan.rathod@prisms.in</field>
-                <field name="email_to">{{ object.email_id.id }}</field>
-                <field name="subject">Invoice for PoS order (Ref {{ object.invoice_id or 'n/a' }})</field>
+                <field name="model_id" ref="Pos.model_pos_checkout"/>
+                <field name="email_from">{{object.from_email_id}}</field>
+                <field name="email_to">{{object.email_id}}</field>
+                <field name="subject">Invoice for PoS order {{object.invoice_id}}</field>
                 <field name="body_html" type="html">
                     <div style="margin: 0px; padding: 0px;">
                         <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                            Dear ${object.name}
+                            Dear <t t-out="object.name"/>
                             <br /><br />
-                            Here is your PoS invoice of Invoice id ${object.invoice_id} created on ${object.date}
-                            <br /><br /> 
-                            The invoice amount in ${object.grand_sum}
+                            Here is your PoS invoice of Invoice id <t t-out="object.invoice_id"/> created on <t t-out="object.date"/>
+                            <br></br>
+                            Your total invoice amount is <t t-out="object.grand_sum"/> Rupees.
                             <br /><br /> 
                             Thank You for Shopping with us Have A Good Day!
                             
@@ -23,7 +23,7 @@
                     </div>
                 </field>
                 <field name="report_template" ref="report_checkout"/>
-                <field name="report_name">Invoice_${(object.invoice_id)}</field>
+                <field name="report_name">Invoice_{{object.invoice_id}}</field>
             </record>
     
             
