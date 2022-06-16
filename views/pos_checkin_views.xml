@@ -37,7 +37,7 @@
                 <form string="Checkin">
                     <sheet>
                         <group>
-                            <field name="name" />
+                            <field name="name" widget="selection"/>
                             <field name="date" />
                             <field name="in_qut" />
                         </group>

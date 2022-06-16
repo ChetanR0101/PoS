@@ -76,13 +76,13 @@
                                             <u><b><field name="name" /></b></u>
                                         </li>
                                         <li>
-                                            List Price: <field name="list_price" />
+                                            List Price: <field name="list_price" /> ₹
                                         </li>
                                         <li>
                                             Discount: <field name="discount" /> %
                                         </li>
                                         <li>
-                                            Sell Price: <field name="price_af_dis" />
+                                            Sell Price: <field name="price_af_dis" /> ₹
                                         </li>
                                     </ul>
 
