@@ -2,6 +2,9 @@
     border-radius: 0 !important; 
     object-fit: cover !important;
     margin-right: 4px !important;
-    width: 60px !important;
+    width: 50px !important;
     height: auto !important;
+}
+.select2-container.o_input.o_field_widget.o_quick_editable > a{
+    height: 50px;
 }
